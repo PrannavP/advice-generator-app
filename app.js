@@ -2,6 +2,8 @@ var idDisplay = document.getElementById('id_no');
 var quoteDisplay = document.getElementById('quote-display');
 const button = document.querySelector('button');
 
+alert("Refresh to get new advice. I'll make a button soon :D");
+
 function getAdvice(api){
     fetch('https://api.adviceslip.com/advice')
       .then(response => response.json())
