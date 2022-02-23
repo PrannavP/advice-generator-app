@@ -1,10 +1,11 @@
 var idDisplay = document.getElementById('id_no');
 var quoteDisplay = document.getElementById('quote-display');
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
+const getNewButton = document.getElementById('dice_icon_svg');
 
-alert("Refresh to get new advice. I'll make a button soon :D");
+// alert("Refresh to get new advice. I'll make a button soon and fix loading issue too :D");
 
-function getAdvice(api){
+function getAdvice(){
     fetch('https://api.adviceslip.com/advice')
       .then(response => response.json())
       .then(data => {
@@ -17,4 +18,5 @@ function getAdvice(api){
       });
 };
 
-button.addEventListener('click', getAdvice);
+// button.addEventListener('click', getAdvice);
+getNewButton.addEventListener('click', getAdvice);
